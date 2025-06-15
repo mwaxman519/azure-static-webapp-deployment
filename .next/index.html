@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next.js Build Test - Azure Deployment</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0070f3 0%, #7928ca 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 600px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .next-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #0070f3;
+            margin-bottom: 30px;
+        }
+        
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        
+        .status {
+            background: #00d4aa;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            font-weight: 500;
+            margin: 20px 0;
+        }
+        
+        .info {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: left;
+        }
+        
+        .build-info {
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="next-logo">▲ Next.js</div>
+        <h1>Build Test Success</h1>
+        <div class="status">✓ Azure Deployment Working</div>
+        <p>This simulated Next.js build was successfully deployed to Azure Static Web Apps</p>
+        
+        <div class="info">
+            <h3>Deployment Details</h3>
+            <p><strong>Build Process:</strong> Simulated Next.js build</p>
+            <p><strong>Output Location:</strong> .next folder</p>
+            <p><strong>Platform:</strong> Azure Static Web Apps</p>
+            <p><strong>GitHub Actions:</strong> Automated deployment</p>
+        </div>
+        
+        <div class="build-info">
+            Build ID: test-build-001<br>
+            Deployed: <span id="timestamp"></span>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('timestamp').textContent = new Date().toLocaleString();
+    </script>
+</body>
+</html>
